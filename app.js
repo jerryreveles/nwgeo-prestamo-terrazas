@@ -1658,7 +1658,7 @@ document.getElementById("btnExportBarreno").addEventListener("click", () => {
   if (!b) return;
   const abrev = (state.proyecto.abrev || abreviarProyecto(state.proyecto.proyecto) || "PRY").trim().toUpperCase();
   const collarRows = ["hole_id,este_utm,norte_utm,cota,azimut,inclinacion,profundidad_m,metodo,diametro_nucleo,fecha_inicio,fecha_fin,empresa,notas",
-    [csvCampo(b.clave), b.este ?? "", b.norte ?? "", b.cota ?? "", b.azimut ?? "", b.inclin ?? "", b.prof ?? "",
+    [csvCampo(b.clave), (b.este != null ? b.este : ""), (b.norte != null ? b.norte : ""), (b.cota != null ? b.cota : ""), (b.azimut != null ? b.azimut : ""), (b.inclin != null ? b.inclin : ""), (b.prof != null ? b.prof : ""),
       csvCampo(b.metodo || ""), csvCampo(b.diam || ""), csvCampo(b.fechaIni || ""), csvCampo(b.fechaFin || ""),
       csvCampo(b.empresa || ""), csvCampo(b.notas || "")].join(",")];
   const surveyRows = ["hole_id,profundidad_m,azimut,inclinacion"];

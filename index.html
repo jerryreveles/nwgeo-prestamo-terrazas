@@ -28,7 +28,7 @@
     font-size:12.5px;border:1px solid #333;white-space:nowrap;}
   .tab.active{background:var(--oro);color:#1b1500;font-weight:600;border-color:var(--oro);}
   main{flex:1 1 auto;overflow:hidden;position:relative;background:#0e1013;}
-  .screen{position:absolute;inset:0;overflow:auto;display:none;-webkit-overflow-scrolling:touch;}
+  .screen{position:absolute;top:0;right:0;bottom:0;left:0;overflow:auto;display:none;-webkit-overflow-scrolling:touch;}
   .screen.active{display:block;}
   #screen-mapa.active{display:flex;flex-direction:column;}
   #mapScroll{flex:1 1 auto;overflow:auto;text-align:center;
@@ -75,7 +75,7 @@
   th{color:var(--gris);font-weight:500;font-size:10.5px;text-transform:uppercase;}
   .pill{display:inline-block;padding:2px 7px;border-radius:8px;background:#2c313a;color:var(--oro-claro);
     font-size:10.5px;}
-  .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;z-index:50;align-items:flex-end;}
+  .modal-bg{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,.6);display:none;z-index:50;align-items:flex-end;}
   .modal-bg.show{display:flex;}
   .modal{background:#1b1f26;width:100%;max-height:88vh;overflow:auto;border-radius:16px 16px 0 0;
     padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom,0));}
